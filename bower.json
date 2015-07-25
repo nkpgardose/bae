@@ -1,0 +1,27 @@
+{
+  "name": "bae",
+  "version": "0.0.0",
+  "authors": [
+    "Neil Kim Gardose <nkpgardose@gmail.com>"
+  ],
+  "description": "A front-end template you'll love",
+  "main": "src/index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "UI",
+    "css",
+    "js",
+    "html",
+    "bae"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
