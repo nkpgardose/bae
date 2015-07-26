@@ -24,9 +24,12 @@ main {
   background: rgb(135, 206, 235);
 }
 hr {
-  display: none;
+  display: block;
   height: 1px;
   border: 0;
+  border-top: 1px solid rgb(204, 204, 204);
+  margin: 1em 0;
+  padding: 0;
 }
 audio,
 canvas,
