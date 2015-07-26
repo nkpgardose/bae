@@ -85,11 +85,11 @@
   @for $i from 1 through ($columns-tablet - 1) {
     .cell-default--#{$i},
     .cell-tablet--#{$i} {
-      @include partialSize($i, $columns-tablet, $gutter);
+      @include partialSize($i, $columns-tablet, $gutter-tablet);
     }
   }
   // 100% for everything else
-  @for $i from $columns-tablet through $columns-default {
+  @for $i from $columns-tablet through $columns-desktop {
     .cell-default--#{$i},
     .cell-tablet--#{$i} {
       @include partialSize(1, 1, $columns-tablet);
@@ -100,11 +100,11 @@
 // -----------------------------------------------------------------------------
 @media #{$range-desktop} {
   .grid {
-    padding: $margin-tablet - ($gutter-tablet / 2);
+    padding: $margin-desktop - ($gutter-desktop / 2);
   }
   .cell {
-    margin: $gutter-tablet / 2;
-    @include partialSize($columns-default, $columns-desktop, $gutter-tablet);
+    margin: $gutter-desktop / 2;
+    @include partialSize($columns-default, $columns-desktop, $gutter-desktop);
   }
   .cell.is-hiddenDesktop {
     display: none !important;
