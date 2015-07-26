@@ -1,6 +1,7 @@
+dist/
+build/
 bower_components/
 node_modules/
-build/
 test/
 tests/
 
