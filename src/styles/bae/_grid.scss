@@ -3,7 +3,7 @@
 // a great grid component of mdl from google, modify it to use camelCase instead
 // https://github.com/google/material-design-lite/blob/master/src/grid/_grid.scss
 @mixin partialSize($size, $columns, $gutter) {
-  width: calc(percentage($size / $columns) - #{$gutter});
+  width: calc(#{percentage($size / $columns)} - #{$gutter});
   .grid--noSpacing > & {
     width: percentage($size / $columns);
   }
@@ -92,7 +92,7 @@
   @for $i from $columns-tablet through $columns-desktop {
     .cell-default--#{$i},
     .cell-tablet--#{$i} {
-      @include partialSize(1, 1, $columns-tablet);
+      @include partialSize(1, 1, $gutter-tablet);
     }
   }
 }
