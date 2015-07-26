@@ -1,0 +1,37 @@
+// utilities - glanceable class name(u-[utility name]).
+// some of the utilities are based on h5bp.com -> awesome
+// but with class names modifications
+.u-clearFix:before,
+.u-clearFix:after {
+  content: " ";
+  display: table;
+}
+.u-clearFix:after {
+  clear: both;
+}
+// Visuals
+.u-hidden {
+  display: none !important;
+}
+.u-visuallyHidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.u-visuallyHidden.is-focus:active,
+.u-visuallyHideden.is-focus:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+.u-invisible {
+  visibility: hidden;
+}

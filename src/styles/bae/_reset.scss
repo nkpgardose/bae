@@ -1,0 +1,125 @@
+// Reset styles is highly based on h5bp.com with modifications
+// A neat explanation of each properties and its value are in h5bp.com
+html {
+  font-size: 1em;
+  line-height: 1.55em;
+  height: 100%;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.87);
+  touch-action: manipulation;
+  -ms-touch-activation: manipulation;
+}
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+main {
+  display: block;
+}
+::-moz-selection {
+  background: rgb(135, 206, 235);
+  text-shadow: none;
+}
+::selection {
+  background: rgb(135, 206, 235);
+}
+hr {
+  display: none;
+  height: 1px;
+  border: 0;
+}
+audio,
+canvas,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+textarea {
+  resize: vertical;
+}
+a {
+  -webkit-tap-highlight-color: transparent; // For some android
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+*[hidden] {
+  display: none !important;
+}
+// Browse happy prompt
+.browsehappy{
+  margin: 0.2em 0;
+  background: rgb(204, 204, 204);
+  color: rgb(0, 0, 0);
+  padding: 0.2em 0;
+}
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

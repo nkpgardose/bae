@@ -1,0 +1,119 @@
+// grid and cell components - follows flexbox display to prevent floats
+// check out flexboxin5.com
+// a great grid component of mdl from google, modify it to use camelCase instead
+// https://github.com/google/material-design-lite/blob/master/src/grid/_grid.scss
+@mixin partialSize($size, $columns, $gutter) {
+  width: calc(percentage($size / $columns) - #{$gutter});
+  .grid--noSpacing > & {
+    width: percentage($size / $columns);
+  }
+}
+
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto 0 auto;
+  align-items: stretch;
+}
+.grid.grid--noSpacing {
+  padding: 0;
+}
+.grid.grid--noSpacing > .cell {
+  margin: 0;
+}
+.cell {
+  box-sizing: border-box;
+  @include partialSize($columns, $columns-default, $gutter);
+}
+.cell--top {
+  align-self: flex-start;
+}
+.cell--middle {
+  align-self: center;
+}
+.cell--bottom {
+  align-self: flex-end;
+}
+.cell--stretch {
+  align-self: stretch;
+}
+// phone
+// -----------------------------------------------------------------------------
+@media #{$range} {
+  // define partial sizes for coulumNumber < totalColumns
+  @for $i from 1 to ($columns - 1) {
+    .grid {
+      padding: $margin - ($gutter / 2);
+    }
+    .cell {
+      margin: $gutter / 2;
+      @include partialSize($columns-default, $columns, $gutter);
+    }
+    .cell.is-hiddenPhone {
+      display: none !important;
+    }
+    // define partial sizes for columnNumber < totalColumns
+    @for $i from 1 through ($columns - 1) {
+      .cell-default--#{$i},
+      .cell-phone--#{$i} {
+        @include partialSize($i, $columns, $gutter);
+      }
+    }
+    // 100% for everything else
+    @for $i from $columns through $columns-desktop {
+      .cell-default--#{$i},
+      .cell-phone--#{$i} {
+        @include partialSize(1, 1, $gutter);
+      }
+    }
+  }
+}
+// tablet
+// -----------------------------------------------------------------------------
+@media #{$range-tablet} {
+  .grid {
+    padding: $margin-tablet - ($gutter-tablet / 2);
+  }
+  .cell {
+    margin: $gutter-tablet / 2;
+    @include partialSize($columns-default, $columns-tablet, $gutter-tablet);
+  }
+  .cell.is-hiddenTablet {
+    display: none !important;
+  }
+  // define partial sizes for columnNumber < totalColumns
+  @for $i from 1 through ($columns-tablet - 1) {
+    .cell-default--#{$i},
+    .cell-tablet--#{$i} {
+      @include partialSize($i, $columns-tablet, $gutter);
+    }
+  }
+  // 100% for everything else
+  @for $i from $columns-tablet through $columns-default {
+    .cell-default--#{$i},
+    .cell-tablet--#{$i} {
+      @include partialSize(1, 1, $columns-tablet);
+    }
+  }
+}
+// desktop
+// -----------------------------------------------------------------------------
+@media #{$range-desktop} {
+  .grid {
+    padding: $margin-tablet - ($gutter-tablet / 2);
+  }
+  .cell {
+    margin: $gutter-tablet / 2;
+    @include partialSize($columns-default, $columns-desktop, $gutter-tablet);
+  }
+  .cell.is-hiddenDesktop {
+    display: none !important;
+  }
+  // define partial size for all number of columns
+  @for $i from 1 through $columns-desktop  {
+    .cell-default--#{$i},
+    .cell-desktop--#{$i} {
+      @include partialSize($i, $columns-desktop, $gutter-desktop);
+    }
+  }
+}
