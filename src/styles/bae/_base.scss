@@ -1,34 +1,35 @@
-* {
-  text-rendering: optimizeLegibility;
-}
-
-html, body {
+html,
+body {
   @include font-sansN4;
-  font-size: 18px;
-  line-height: 1.45;
+  font-size: 16px;
+  line-height: 1.6;
   letter-spacing: .005em;
 }
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
   @include font-sansN3;
   margin: 0;
   padding: 0;
+  text-rendering: optimizeLegibility;
 }
-
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
 }
-
 h1 {
-  font-size: 38px;
+  font-size: 48px;
   line-height: 1.25em;
   margin: 24px 0;
 }
 h2 {
-  font-size: 32px;
+  font-size: 40px;
   line-height: 1.15384615em;
   margin: 24px 0;
 }
 h3 {
-  font-size: 28px;
+  font-size: 32px;
   line-height: 1.13636364em;
   margin: 24px 0;
 }
@@ -38,28 +39,58 @@ h4 {
   margin: 24px 0 16px 0;
 }
 h5 {
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.25em;
   margin: 24px 0 16px 0;
 }
 h6 {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.25em;
   margin: 24px 0 16px 0;
 }
 p {
   margin-bottom: 16px;
 }
-
-@media #{$range-tablet} {
+@media #{$range} {
+  html,
+  body {
+    font-size: 14px;
+    line-height: 1.4;
+  }
   h1 {
     font-size: 40px;
+    line-height: 1.25em;
+    margin: 24px 0;
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 1.15384615em;
+    margin: 24px 0;
+  }
+  h3 {
+    font-size: 26px;
+    line-height: 1.13636364em;
+    margin: 24px 0;
+  }
+  h4 {
+    font-size: 18px;
+    line-height: 1.25em;
+    margin: 24px 0 16px 0;
+  }
+  h5 {
+    font-size: 16px;
+    line-height: 1.25em;
+    margin: 24px 0 16px 0;
+  }
+  h6 {
+    font-size: 15px;
+    line-height: 1.25em;
+    margin: 24px 0 16px 0;
+  }
+  p {
+    margin-bottom: 15px;
   }
 }
 
-@media #{$range-desktop} {
-  h1 {
-    font-size: 48px;
-  }
-}
-
+@media #{$range-tablet} {}
+@media #{$range-desktop} {}
