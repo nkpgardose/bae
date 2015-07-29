@@ -54,15 +54,15 @@
     }
     // define partial sizes for columnNumber < totalColumns
     @for $i from 1 through ($columns - 1) {
-      .cell-default--#{$i},
-      .cell-phone--#{$i} {
+      .cell--default#{$i},
+      .cell--phone#{$i}.cell--phone#{$i} {
         @include partialSize($i, $columns, $gutter);
       }
     }
     // 100% for everything else
     @for $i from $columns through $columns-desktop {
-      .cell-default--#{$i},
-      .cell-phone--#{$i} {
+      .cell--default#{$i},
+      .cell--phone#{$i}.cell--phone#{$i} {
         @include partialSize(1, 1, $gutter);
       }
     }
@@ -83,15 +83,15 @@
   }
   // define partial sizes for columnNumber < totalColumns
   @for $i from 1 through ($columns-tablet - 1) {
-    .cell-default--#{$i},
-    .cell-tablet--#{$i} {
+    .cell--default#{$i},
+    .cell--tablet#{$i}.cell--tablet#{$i} {
       @include partialSize($i, $columns-tablet, $gutter-tablet);
     }
   }
   // 100% for everything else
   @for $i from $columns-tablet through $columns-desktop {
-    .cell-default--#{$i},
-    .cell-tablet--#{$i} {
+    .cell--default#{$i},
+    .cell--tablet#{$i}.cell--tablet#{$i} {
       @include partialSize(1, 1, $gutter-tablet);
     }
   }
@@ -111,8 +111,8 @@
   }
   // define partial size for all number of columns
   @for $i from 1 through $columns-desktop  {
-    .cell-default--#{$i},
-    .cell-desktop--#{$i} {
+    .cell--default#{$i},
+    .cell--desktop#{$i}.cell--desktop#{$i} {
       @include partialSize($i, $columns-desktop, $gutter-desktop);
     }
   }
