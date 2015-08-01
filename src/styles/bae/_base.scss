@@ -1,9 +1,10 @@
 html,
 body {
   @include font-sansN4;
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: $fontSize-base--body;
+  line-height: $lineHeight-loose--body;
   letter-spacing: .005em;
+  color: rgba(0, 0, 0, 0.87);
 }
 h1, h2, h3, h4, h5, h6 {
   @include font-sansN3;
@@ -17,80 +18,68 @@ h3 small,
 h4 small,
 h5 small,
 h6 small {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 0.6em;
 }
 h1 {
-  font-size: 48px;
-  line-height: 1.25em;
+  font-size: $fontSize-grande--h1;
+  line-height: $lineHeight-tighter--h1;
   margin: 24px 0;
 }
 h2 {
-  font-size: 40px;
-  line-height: 1.15384615em;
+  font-size: $fontSize-jumbo--h2;
+  line-height: $lineHeight-tighter--h2;
   margin: 24px 0;
 }
 h3 {
-  font-size: 32px;
-  line-height: 1.13636364em;
+  font-size: $fontSize-largest--h3;
+  line-height: $lineHeight-tight--h3;
   margin: 24px 0;
 }
 h4 {
-  font-size: 26px;
-  line-height: 1.25em;
+  font-size: $fontSize-larger--h4;
+  line-height: $lineHeight-sans--h4;
   margin: 24px 0 16px 0;
 }
 h5 {
-  font-size: 18px;
-  line-height: 1.25em;
+  font-size: $fontSize-large--h5;
+  line-height: $lineHeight-base--h5;
   margin: 24px 0 16px 0;
 }
 h6 {
-  font-size: 16px;
-  line-height: 1.25em;
+  font-size: $fontSize-serif--h6;
+  line-height: $lineHeight-loose--h6;
   margin: 24px 0 16px 0;
 }
 p {
   margin-bottom: 16px;
 }
+
 @media #{$range} {
   html,
   body {
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: $fontSize-base--bodyPhone;
+    line-height: $lineHeight-base--bodyPhone;
   }
   h1 {
-    font-size: 40px;
-    line-height: 1.25em;
-    margin: 24px 0;
+    font-size: $fontSize-jumbo--h1Phone;
   }
   h2 {
-    font-size: 32px;
-    line-height: 1.15384615em;
-    margin: 24px 0;
+    font-size: $fontSize-largest--h2Phone;
   }
   h3 {
-    font-size: 26px;
-    line-height: 1.13636364em;
-    margin: 24px 0;
+    font-size: $fontSize-larger--h3Phone;
   }
   h4 {
-    font-size: 18px;
-    line-height: 1.25em;
-    margin: 24px 0 16px 0;
+    font-size: $fontSize-large--h4Phone;
   }
   h5 {
-    font-size: 16px;
-    line-height: 1.25em;
-    margin: 24px 0 16px 0;
+    font-size: $fontSize-serif--h5Phone;
   }
   h6 {
-    font-size: 15px;
-    line-height: 1.25em;
-    margin: 24px 0 16px 0;
+    font-size: $fontSize-base--h6Phone;
   }
   p {
     margin-bottom: 15px;
   }
 }
-
-@media #{$range-tablet} {}
-@media #{$range-desktop} {}

@@ -15,18 +15,41 @@ $fontSize-large:        26px;
 $fontSize-larger:       32px;
 $fontSize-largest:      40px;
 $fontSize-jumbo:        48px;
+$fontSize-grande:       56px;
 // line height scale values
-$lineHeight-tigher:     1.2;
+$lineHeight-tighter:     1.2;
 $lineHeight-tight:      1.3;
 $lineHeight-sans:       1.45;
 $lineHeight-base:       1.475;
-$lineHegiht-loose:      1.6;
-$lineHeght-looser:      1.8;
+$lineHeight-loose:      1.6;
+$lineHeight-looser:      1.8;
 // letter spacing scale values
 $letterSpacing-normal:  normal;
 // type application
 // -----------------------------------------------------------------------------
+$fontSize-base--body:                 $fontSize-base;
+$fontSize-grande--h1:                 $fontSize-grande;
+$fontSize-jumbo--h2:                  $fontSize-jumbo;
+$fontSize-largest--h3:                $fontSize-largest;
+$fontSize-larger--h4:                 $fontSize-larger;
+$fontSize-large--h5:                  $fontSize-large;
+$fontSize-serif--h6:                  $fontSize-serif;
+$fontSize-base--bodyPhone:            $fontSize-sans;
+$fontSize-jumbo--h1Phone:             $fontSize-jumbo;
+$fontSize-largest--h2Phone:           $fontSize-largest;
+$fontSize-larger--h3Phone:            $fontSize-larger;
+$fontSize-large--h4Phone:             $fontSize-large;
+$fontSize-serif--h5Phone:             $fontSize-serif;
+$fontSize-base--h6Phone:              $fontSize-base;
 
+$lineHeight-loose--body:              $lineHeight-loose;
+$lineHeight-base--bodyPhone:          $lineHeight-base;
+$lineHeight-tighter--h1:              $lineHeight-tighter;
+$lineHeight-tighter--h2:              $lineHeight-tighter;
+$lineHeight-tight--h3:                $lineHeight-tight;
+$lineHeight-sans--h4:                 $lineHeight-sans;
+$lineHeight-base--h5:                 $lineHeight-base;
+$lineHeight-loose--h6:                $lineHeight-loose;
 // mixins for type
 // -----------------------------------------------------------------------------
 @mixin font-serifN3 {
