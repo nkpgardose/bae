@@ -1,0 +1,108 @@
+// type. Prefer px for precise value.
+$fontFamily-sans: 'Helvetica', 'Arial', sans-serif;
+$fontFamily-serif: 'Quattrocento', Georgia, 'Times New Roman', Times, serif;
+// private variable type values
+// -----------------------------------------------------------------------------
+// font size scale values
+$fontSize-tiny:         8px;
+$fontSize-smallest:     10px;
+$fontSize-smaller:      12px;
+$fontSize-small:        13px;
+$fontSize-sans:         15px;
+$fontSize-base:         16px;
+$fontSize-serif:        18px;
+$fontSize-large:        26px;
+$fontSize-larger:       32px;
+$fontSize-largest:      40px;
+$fontSize-jumbo:        48px;
+$fontSize-grande:       56px;
+// line height scale values
+$lineHeight-tighter:     1.2;
+$lineHeight-tight:      1.3;
+$lineHeight-sans:       1.45;
+$lineHeight-base:       1.475;
+$lineHeight-loose:      1.6;
+$lineHeight-looser:      1.8;
+// letter spacing scale values
+$letterSpacing-normal:  normal;
+// type application
+// -----------------------------------------------------------------------------
+$fontSize-base--body:                 $fontSize-base;
+$fontSize-grande--h1:                 $fontSize-grande;
+$fontSize-jumbo--h2:                  $fontSize-jumbo;
+$fontSize-largest--h3:                $fontSize-largest;
+$fontSize-larger--h4:                 $fontSize-larger;
+$fontSize-large--h5:                  $fontSize-large;
+$fontSize-serif--h6:                  $fontSize-serif;
+$fontSize-base--bodyPhone:            $fontSize-sans;
+$fontSize-jumbo--h1Phone:             $fontSize-jumbo;
+$fontSize-largest--h2Phone:           $fontSize-largest;
+$fontSize-larger--h3Phone:            $fontSize-larger;
+$fontSize-large--h4Phone:             $fontSize-large;
+$fontSize-serif--h5Phone:             $fontSize-serif;
+$fontSize-base--h6Phone:              $fontSize-base;
+
+$lineHeight-loose--body:              $lineHeight-loose;
+$lineHeight-base--bodyPhone:          $lineHeight-base;
+$lineHeight-tighter--h1:              $lineHeight-tighter;
+$lineHeight-tighter--h2:              $lineHeight-tighter;
+$lineHeight-tight--h3:                $lineHeight-tight;
+$lineHeight-sans--h4:                 $lineHeight-sans;
+$lineHeight-base--h5:                 $lineHeight-base;
+$lineHeight-loose--h6:                $lineHeight-loose;
+// mixins for type
+// -----------------------------------------------------------------------------
+@mixin font-serifN3 {
+  font-weight: 300;
+  font-style: $fontFamily-serif;
+}
+@mixin font-serifI3 {
+  font-style: italic;
+  font-weight: 300;
+  font-family: $fontFamily-serif;
+}
+@mixin font-serifN4 {
+  font-weight: normal;
+  font-family: $fontFamily-serif;
+}
+@mixin font-serifI4 {
+  font-style: italic;
+  font-weight: normal;
+  font-family: $fontFamily-serif;
+}
+@mixin font-serifN7 {
+  font-weight: bold;
+  font-family: $fontFamily-serif;
+}
+@mixin font-serifI7 {
+ font-style: italic;
+ font-weight: bold;
+ font-family: $fontFamily-serif;
+}
+@mixin font-sansN3 {
+  font-weight: 300;
+  font-style: $fontFamily-sans;
+}
+@mixin font-sansI3 {
+  font-style: italic;
+  font-weight: 300;
+  font-family: $fontFamily-sans;
+}
+@mixin font-sansN4 {
+  font-weight: normal;
+  font-family: $fontFamily-sans;
+}
+@mixin font-sansI4 {
+  font-style: italic;
+  font-weight: normal;
+  font-family: $fontFamily-sans;
+}
+@mixin font-sansN7 {
+  font-weight: bold;
+  font-family: $fontFamily-sans;
+}
+@mixin font-sansI7 {
+  font-style: italic;
+  font-weight: bold;
+  font-family: $fontFamily-sans;
+}
