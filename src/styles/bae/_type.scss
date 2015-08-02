@@ -17,12 +17,12 @@ $fontSize-largest:      40px;
 $fontSize-jumbo:        48px;
 $fontSize-grande:       56px;
 // line height scale values
-$lineHeight-tighter:     1.2;
+$lineHeight-tighter:    1.2;
 $lineHeight-tight:      1.3;
 $lineHeight-sans:       1.45;
 $lineHeight-base:       1.475;
 $lineHeight-loose:      1.6;
-$lineHeight-looser:      1.8;
+$lineHeight-looser:     1.8;
 // letter spacing scale values
 $letterSpacing-normal:  normal;
 // type application
@@ -41,6 +41,7 @@ $fontSize-larger--h3Phone:            $fontSize-larger;
 $fontSize-large--h4Phone:             $fontSize-large;
 $fontSize-serif--h5Phone:             $fontSize-serif;
 $fontSize-base--h6Phone:              $fontSize-base;
+$fontSize-base--button:               $fontSize-base;
 
 $lineHeight-loose--body:              $lineHeight-loose;
 $lineHeight-base--bodyPhone:          $lineHeight-base;
