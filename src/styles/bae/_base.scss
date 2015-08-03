@@ -54,6 +54,12 @@ h6 {
 p {
   margin-bottom: 16px;
 }
+a {
+  color: $color-accent--link;
+}
+a:focus {
+  outline: thin dotted black;
+}
 
 @media #{$range} {
   html,
