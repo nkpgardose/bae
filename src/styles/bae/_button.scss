@@ -8,7 +8,7 @@
   vertical-align: middle;
   font-size: $fontSize-base--button;
   letter-spacing: 0;
-  line-height: 31px;
+  line-height: 32px;
   text-decoration: none;
   text-transform: uppercase;
   text-overflow: ellipsis;
@@ -20,6 +20,7 @@
   outline: none;
   overflow: hidden;
   white-space: nowrap;
+  text-rendering: optimizeLegibility;
 }
 .button::-moz-focus-inner {
   border: 0;
@@ -38,6 +39,46 @@
   cursor: auto;
   background-color: transparent;
 }
+a.button:focus {
+  outline: none;
+}
 input.button[type="submit"] {
   -webkit-appearance: none;
+}
+// button with colors
+.button--filled {
+  color: $color-white--buttonFilled;
+}
+// primary button modifier
+.button--primary {
+  background-color: $bgColor-primary--buttonPrimary;
+}
+.button--primary:hover {
+  background-color: darken($bgColor-primary--buttonPrimary, 5);
+}
+.button--primary:focus:not(:active) {
+  background-color: darken($bgColor-primary--buttonPrimary, 5);
+}
+.button--primary:active {
+  background-color: darken($bgColor-primary--buttonPrimary, 10);
+}
+// accent button modifier
+.button--accent {
+  background-color: $bgColor-accent--buttonAccent;
+}
+.button--accent:hover {
+  background-color: darken($bgColor-accent--buttonAccent, 5);
+}
+.button--accent:focus:not(:active) {
+  background-color: darken($bgColor-accent--buttonAccent, 5);
+}
+.button--accent:active {
+  background-color: darken($bgColor-accent--buttonAccent, 10);
+}
+// white button modifier
+.button.button--white {
+  background-color: rgb(255, 255, 255);
+}
+.button--white:focus:not(:active) {
+  background-color: white;
 }

@@ -15,13 +15,21 @@ $charcoal:                    rgb(33, 33, 33);
 $darkgrey:                    rgb(66, 66, 66);
 $grey:                        rgb(97, 97, 97);
 $silver:                      rgb(236, 236, 236);
+// color for the app
+$primary:                     rgb(207, 70, 70);
+$accent:                      rgb(33, 150, 243);
 // color appplication
 // -----------------------------------------------------------------------------
 $color-blackA8--body:                 $blackA8;
 $color-blackA5--subHeader:            $blackA5;
 $color-blackA8--button:               $blackA8;
+$color-primary--buttonPrimaryInv:     $primary;
+$color-accent--buttonAccentInv:       $accent;
+$color-white--buttonFilled:           $white;
 
 $bgColor-blackA1--buttonHover:        $blackA1;
 $bgColor-blackA1--buttonFocus:        $blackA1;
 $bgColor-blackA2--buttonActive:       $blackA2;
 $bgColor-blackA2--buttonDisable:      $blackA2;
+$bgColor-primary--buttonPrimary:      $primary;
+$bgColor-accent--buttonAccent:        $accent;
