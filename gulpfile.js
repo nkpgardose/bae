@@ -5,7 +5,6 @@ var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
-
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
   'ie_mob >= 10',
@@ -85,39 +84,42 @@ gulp.task('styles:dev', function() {
 // Scripts Production
 gulp.task('scripts', ['jscs', 'jshint'], function() {
   return gulp.src('src/scripts/**/*.js')
-      .pipe($.sourcemaps.init())
-      .pipe($.concat('bae.js'))
-      .pipe(gulp.dest('./dist/scripts'))
-      .pipe($.uglify({
-        sourceRoot: '.',
-        soruceMapIncludeSources: true
-      }))
-      .pipe($.concat('bae.min.js'))
-      .pipe($.sourcemaps.write('./'))
-      .pipe(gulp.dest('./dist/scripts'))
-      .pipe($.size({title: 'scripts'}));
+    .pipe($.sourcemaps.init())
+    // Concatenate JS
+    .pipe($.concat('bae.js'))
+    .pipe(gulp.dest('./dist/scripts'))
+    // Minify JS
+    .pipe($.uglify({
+      sourceRoot: '.',
+      soruceMapIncludeSources: true
+    }))
+    .pipe($.concat('bae.min.js'))
+    .pipe($.sourcemaps.write('./'))
+    .pipe(gulp.dest('./dist/scripts'))
+    .pipe($.size({title: 'scripts'}));
 });
 
 // Styles Production
 gulp.task('styles', function() {
   return gulp.src('src/styles/*.scss')
-      .pipe($.sourcemaps.init())
-      .pipe($.sass({
-        precision: 10,
-        onError: console.error.bind(console, 'Sass error:')
-      }))
-      .pipe($.cssInlineImages({
-        webRoot: 'src'
-      }))
-      .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
-      .pipe($.concat('bae.css'))
-      .pipe(gulp.dest('./dist/styles'))
-      // Minify css
-      .pipe($.if('*.css', $.csso()))
-      .pipe($.concat('bae.min.css'))
-      .pipe($.sourcemaps.write('./'))
-      .pipe(gulp.dest('./dist/styles'))
-      .pipe($.size({title: 'styles'}));
+    .pipe($.sourcemaps.init())
+    .pipe($.sass({
+      precision: 10,
+      onError: console.error.bind(console, 'Sass error:')
+    }))
+    .pipe($.cssInlineImages({
+      webRoot: 'src'
+    }))
+    .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
+    // Concatenate CSS
+    .pipe($.concat('bae.css'))
+    .pipe(gulp.dest('./dist/styles'))
+    // Minify CSS
+    .pipe($.if('*.css', $.csso()))
+    .pipe($.concat('bae.min.css'))
+    .pipe($.sourcemaps.write('./'))
+    .pipe(gulp.dest('./dist/styles'))
+    .pipe($.size({title: 'styles'}));
 });
 
 gulp.task('default', ['scripts', 'styles']);
