@@ -63,6 +63,7 @@ a, .button {
   color: rgb(0, 0, 0);
   padding: 0.2em 0;
 }
+
 @media print,
        (-o-min-device-pixel-ratio: 5/4),
        (-webkit-min-device-pixel-ratio: 1.25),
@@ -79,7 +80,6 @@ a, .button {
     box-shadow: none !important;
     text-shadow: none !important;
   }
-
   a,
   a:visited {
     text-decoration: underline;
@@ -96,33 +96,27 @@ a, .button {
   a[href^="javascript:"]:after {
     content: "";
   }
-
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 1px solid rgb(153, 153, 153);
     page-break-inside: avoid;
   }
-
   thead {
     display: table-header-group;
   }
-
   tr,
   img {
     page-break-inside: avoid;
   }
-
   img {
     max-width: 100% !important;
   }
-
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3;
   }
-
   h2,
   h3 {
     page-break-after: avoid;
