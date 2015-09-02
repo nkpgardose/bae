@@ -43,15 +43,16 @@
   // define partial sizes for coulumNumber < totalColumns
   @for $i from 1 to ($columns - 1) {
     .grid {
-      padding: $margin - ($gutter / 2);
+      padding: $margin-phone - ($gutter-phone / 2);
     }
     .cell {
-      margin: $gutter / 2;
+      margin: $gutter-phone / 2;
       @include partialSize($columns-default, $columns, $gutter);
     }
     .cell.is-hiddenPhone {
       display: none !important;
     }
+
     // define partial sizes for columnNumber < totalColumns
     @for $i from 1 through ($columns - 1) {
       .cell--default#{$i},
@@ -59,6 +60,7 @@
         @include partialSize($i, $columns, $gutter);
       }
     }
+    
     // 100% for everything else
     @for $i from $columns through $columns-desktop {
       .cell--default#{$i},
